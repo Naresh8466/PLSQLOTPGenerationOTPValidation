@@ -8,3 +8,22 @@ BEGIN
     COMMIT;
 END otp_generation;
 /
+
+
+-----Execute Procedure
+--Using Anonymous Block
+    
+Declare
+OTP number;
+Begin
+Otp_generation('9123456789',OTP);
+Dbms_output.put_line(OTP);
+end;
+/
+
+--OUTPUT :- 863565
+/*
+MOBILENUMBER        OTP OTPGENERATEDTIME     OTPEXPIREDTIME
+------------ ---------- -------------------- --------------------
+  8466907854     655708 06-AUG-23            06-AUG-23
+  9123456789     863565 06-AUG-23            06-AUG-23  */
